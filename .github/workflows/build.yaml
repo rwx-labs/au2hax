@@ -18,8 +18,7 @@ jobs:
       id: matrix
       run: |
         matrix="$(./hack/build.py)"
-
-        echo "::set-output name=matrix-json::${matrix}"
+        echo "matrix-json=${matrix}" >> $GITHUB_OUTPUT
 
   build:
     name: Build & Publish
@@ -53,7 +52,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: .
-        push: false # ${{ github.event_name != 'pull_request' }}
+        push: ${{ github.event_name != 'pull_request' }}
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
         build-args: |

@@ -9,6 +9,21 @@
       "name": "john",
       "packages": ["john"],
       "entrypoint": "/usr/bin/john"
+    },
+    {
+      "name": "nmap",
+      "packages": ["nmap"],
+      "entrypoint": "/usr/bin/nmap"
+    },
+    {
+      "name": "exiftool",
+      "packages": ["exiftool"],
+      "entrypoint": "/usr/bin/exiftool"
+    },
+    {
+      "name": "file",
+      "packages": ["file"],
+      "entrypoint": "/usr/bin/file"
     }
   ]
 }
