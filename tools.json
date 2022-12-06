@@ -1,0 +1,14 @@
+{
+  "alpine": [
+    {
+      "name": "binwalk",
+      "packages": ["binwalk"],
+      "entrypoint": "/usr/bin/binwalk"
+    },
+    {
+      "name": "john",
+      "packages": ["john"],
+      "entrypoint": "/usr/bin/john"
+    }
+  ]
+}
