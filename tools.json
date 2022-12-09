@@ -21,9 +21,13 @@
       "entrypoint": "/usr/bin/exiftool"
     },
     {
-      "name": "file",
-      "packages": ["file"],
-      "entrypoint": "/usr/bin/file"
+      "name": "file-utils",
+      "packages": [
+        "file", "binwalk", "tar", "xz", "py3-opengl", "py3-capstone", "arj",
+        "cabextract", "cpio", "gzip", "mtd-utils", "p7zip", "squashfs-tools",
+        "bzip2", "sleuthkit"
+      ],
+      "entrypoint": "/usr/bin/binwalk"
     }
   ]
 }
